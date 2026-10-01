@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="株式会社SKYSは、経営と現場の両方に伴走し、自分たちで決め、学び続けられる組織づくりを支援します。組織運営の伴走支援、経営・人事の壁打ち、チーム立ち上げ支援。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="株式会社SKYS">
+<meta property="og:description" content="AIで速くなった仕事を、組織の成果につなげる。">
+<meta property="og:url" content="https://www.skys.world/">
+<meta property="og:image" content="https://www.skys.world/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://www.skys.world/">
+<title>株式会社SKYS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+html { padding: 0; }
+/* Layout: one narrow reading column offset to the left, the brush mark bleeding off the right edge of the hero; company facts set as a ledger. */
+:root {
+  --paper: #ffffff;
+  --ink: #1d1416;
+  --ink-soft: #5c5153;
+  --rule: #e9e3e2;
+  --ember: #d9481f;
+  --maroon: #4a0b10;
+  --wash: #faf6f5;
+  --display: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --latin: "Jost", "Avenir Next", "Helvetica Neue", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--maroon); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--ember); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: clamp(16px, 5vw, 48px); }
+
+/* header */
+.site-head { border-bottom: 1px solid var(--rule); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img.m { height: 34px; width: auto; }
+.brand img.w { height: 13px; width: auto; }
+.site-nav { display: flex; gap: clamp(14px, 3vw, 28px); font-size: 14px; }
+.site-nav a { color: var(--ink-soft); text-decoration: none; }
+.site-nav a:hover { color: var(--ink); }
+
+/* hero */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { position: relative; padding-block: clamp(56px, 10vw, 120px) clamp(48px, 8vw, 96px); }
+.hero-mark {
+  position: absolute; right: -6%; top: 50%; transform: translateY(-50%);
+  width: min(520px, 52%); height: auto; opacity: 1; pointer-events: none;
+}
+.hero-copy { position: relative; max-width: 34em; }
+.eyebrow { font-family: var(--latin); font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ember); margin: 0 0 20px; }
+h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(28px, 5.2vw, 52px); line-height: 1.42; letter-spacing: 0.01em;
+  margin: 0 0 28px; text-wrap: balance;
+}
+h1 .line { display: block; }
+.ph { display: inline-block; }
+h1, h2, h3 { word-break: auto-phrase; }
+.lead { font-size: clamp(15px, 1.7vw, 17px); color: var(--ink-soft); max-width: 30em; margin: 0; }
+
+/* sections */
+section.block { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rule); }
+.sec-head { display: grid; grid-template-columns: 180px 1fr; gap: 24px 48px; align-items: baseline; }
+.sec-label { font-family: var(--latin); font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-soft); margin: 0; }
+h2 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 30px); line-height: 1.55; margin: 0; text-wrap: balance; }
+.sec-body { grid-column: 2; min-width: 0; }
+.sec-body > p { max-width: 36em; margin: 0; }
+
+/* three lenses */
+.lenses { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+.lenses li { padding: 22px 24px 4px 0; min-width: 0; }
+.lenses li + li { padding-left: 24px; border-left: 1px solid var(--rule); }
+.lenses h3 { font-size: 18px; font-weight: 700; margin: 0 0 8px; line-height: 1.6; }
+.lenses p { margin: 0; font-size: 14.5px; color: var(--ink-soft); line-height: 1.85; }
+
+/* services */
+.services { margin-top: 40px; display: grid; gap: 0; }
+.svc { display: grid; grid-template-columns: 1fr 15em; gap: 8px 40px; padding-block: 28px; border-top: 1px solid var(--rule); }
+.svc:last-child { border-bottom: 1px solid var(--rule); }
+.svc h3 { grid-column: 1 / -1; font-size: 19px; font-weight: 700; margin: 0; line-height: 1.6; }
+.svc p { margin: 0; color: var(--ink-soft); font-size: 15px; min-width: 0; }
+.svc dl { margin: 0; font-size: 13px; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; align-content: start; color: var(--ink-soft); }
+.svc dt { color: var(--ink); font-weight: 500; white-space: nowrap; }
+.svc dd { margin: 0; }
+.stance { margin: 36px 0 0; padding: 22px 26px; background: var(--wash); font-size: 15px; max-width: 40em; }
+.stance strong { color: var(--maroon); font-weight: 700; }
+
+/* representative */
+.rep { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 32px; max-width: 40em; }
+.rep-name { font-size: 20px; font-weight: 700; margin: 0; }
+.rep-name small { display: block; font-size: 13px; font-weight: 400; color: var(--ink-soft); }
+.rep-name .en { font-family: var(--latin); font-size: 13px; letter-spacing: 0.12em; color: var(--ink-soft); margin-left: 10px; font-weight: 400; }
+.career { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: 14.5px; }
+.career li { display: grid; grid-template-columns: 1.2em 1fr; color: var(--ink-soft); }
+.career li::before { content: "—"; color: var(--ember); }
+.links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-family: var(--latin); font-size: 14px; letter-spacing: 0.06em; margin: 0; }
+
+/* ledger */
+.ledger { margin: 32px 0 0; display: grid; grid-template-columns: 9em 1fr; border-top: 2px solid var(--ink); font-size: 15px; }
+.ledger dt, .ledger dd { padding: 16px 0; border-bottom: 1px solid var(--rule); margin: 0; min-width: 0; }
+.ledger dt { color: var(--ink-soft); font-size: 14px; }
+.ledger dd ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 20px; }
+.ledger .note { display: block; font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* contact */
+.contact-row { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.mail { font-family: var(--latin); font-size: clamp(22px, 3.4vw, 30px); letter-spacing: 0.04em; color: var(--ink); user-select: all; }
+.copy { font: inherit; font-size: 13px; padding: 6px 14px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; border-radius: 999px; }
+.copy:hover { background: var(--ink); color: var(--paper); }
+.contact-note { margin: 14px 0 0; font-size: 14px; color: var(--ink-soft); }
+
+footer { border-top: 1px solid var(--rule); }
+footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-family: var(--latin); font-size: 12px; letter-spacing: 0.1em; color: var(--ink-soft); }
+footer img { height: 11px; width: auto; opacity: 0.7; }
+
+@media (max-width: 760px) {
+  .hero-mark { width: 62%; right: -18%; top: 18px; transform: none; opacity: 0.16; }
+  .sec-head { grid-template-columns: 1fr; gap: 12px; }
+  .sec-body { grid-column: 1; }
+  .lenses { grid-template-columns: 1fr; }
+  .lenses li, .lenses li + li { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--rule); }
+  .svc { grid-template-columns: 1fr; }
+  .ledger { grid-template-columns: 1fr; }
+  .ledger dt { border-bottom: 0; padding-bottom: 0; }
+  .ledger dd { padding-top: 2px; }
+}
+@media (max-width: 420px) {
+  .site-nav { width: 100%; justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="site-head" lang="ja">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="株式会社SKYS トップへ">
+      <img class="m" src="images/mark.png" alt="">
+      <img class="w" src="images/wordmark.png" alt="SKYS">
+    </a>
+    <nav class="site-nav" aria-label="ページ内">
+      <a href="#service">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" lang="ja">
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-mark" src="images/mark.png" alt="">
+      <div class="hero-copy">
+        <p class="eyebrow">Organization Development</p>
+        <h1><span class="line"><span class="ph">AIで</span><span class="ph">速くなった</span><span class="ph">仕事を、</span></span><span class="line"><span class="ph">組織の</span><span class="ph">成果に</span><span class="ph">つなげる。</span></span></h1>
+        <p class="lead">AIで個人の仕事が速くなっても、組織の成果が上がるとは限りません。株式会社SKYSは、経営と現場の両方に伴走し、自分たちで決め、学び続けられる組織づくりを支援します。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Approach</p>
+        <h2><span class="ph">人の問題に</span><span class="ph">見えて、</span><wbr><span class="ph">実は</span><span class="ph">仕組みの</span><span class="ph">問題で</span><span class="ph">あることが</span><span class="ph">多い。</span></h2>
+        <div class="sec-body">
+          <p>AIで一人ひとりの手が速くなるほど、組織の仕組みの差が成果の差になって表れます。私たちは、次の三つが組織の中で回っているかを見て、整えます。</p>
+          <ul class="lenses">
+            <li>
+              <h3>誰が決めるか</h3>
+              <p>役割と意思決定の境界を言葉にし、決める人が不在の「空白」をなくします。</p>
+            </li>
+            <li>
+              <h3>意図が届いているか</h3>
+              <p>なぜそれをやるのかが現場まで届き、現場の学びが経営の判断に戻る流れをつくります。</p>
+            </li>
+            <li>
+              <h3>学びが回っているか</h3>
+              <p>正解が出るのを待たずに、小さく試してふりかえるループを社内に残します。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="service">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Service</p>
+        <h2>事業内容</h2>
+        <div class="sec-body">
+          <div class="services">
+            <article class="svc">
+              <h3>組織運営の伴走支援</h3>
+              <p>経営者・部門責任者に伴走し、会議・役割・意思決定の流れを整えます。定例への同席と1on1をくり返し、社内のメンバーが自分たちで回せる状態をつくります。</p>
+              <dl><dt>対象</dt><dd>経営者・人事責任者・部門責任者</dd><dt>目安</dt><dd>20〜40名の組織で週1〜2日</dd></dl>
+            </article>
+            <article class="svc">
+              <h3>経営・人事の壁打ち</h3>
+              <p>戦略と実行の接続、役割の線引き、採用・育成の論点を整理し、次の一手まで具体にします。</p>
+              <dl><dt>対象</dt><dd>事業や組織の転換期にいる経営・人事・部門の責任者</dd><dt>形式</dt><dd>週次〜隔週、60〜90分の定例</dd></dl>
+            </article>
+            <article class="svc">
+              <h3>チーム立ち上げ支援</h3>
+              <p>創業期や新しいチームの役割・決め方・学習のループを、最初から設計します。人数が増えても使える型を残します。</p>
+              <dl><dt>対象</dt><dd>創業者・共同創業者・1〜8名のチーム</dd><dt>目安</dt><dd>週0.5〜1日</dd></dl>
+            </article>
+          </div>
+          <p class="stance"><strong>実務の代行はしません。</strong>会議を回し続けることや、社内の意思決定を肩代わりすることはせず、問い・観察・フィードバックで当事者の学習を支えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="people">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Representative</p>
+        <h2>代表</h2>
+        <div class="sec-body">
+          <div class="rep">
+            <p class="rep-name">豊田 聡<span class="en">So Toyota</span><small>代表取締役 / 組織開発・HRBP</small></p>
+            <ul class="career">
+              <li>コナミデジタルエンタテインメントでゲーム開発に従事</li>
+              <li>ソニー・コンピュータエンタテインメントでゲーム開発のプロデュース、チームビルディング、現場改善を担当</li>
+              <li>Pastoral Dog でアジャイルコーチとして顧客の組織立ち上げを支援</li>
+              <li>SmartHR 人材・組織開発本部 / 人事管理本部ダイレクターとして人事組織のリブートを担当</li>
+            </ul>
+            <p class="links">
+              <a href="https://note.com/sotoyota" target="_blank" rel="noopener">note</a>
+              <a href="https://x.com/sotoyota_agile" target="_blank" rel="noopener">X</a>
+              <a href="https://www.linkedin.com/in/sotoyota/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="company">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Company</p>
+        <h2>会社概要</h2>
+        <div class="sec-body">
+          <dl class="ledger">
+            <dt>会社名</dt><dd>株式会社SKYS（SKYS ltd.）</dd>
+            <dt>代表者</dt><dd>代表取締役 豊田 聡</dd>
+            <dt>所在地</dt><dd>東京都港区高輪2-14-14</dd>
+            <dt>創業</dt><dd class="num">2015年1月</dd>
+            <dt>設立</dt><dd class="num">2015年8月</dd>
+            <dt>事業内容</dt><dd>組織運営の伴走支援、経営・人事の壁打ち、チーム立ち上げ支援</dd>
+            <dt>主な取引先</dt>
+            <dd>
+              <ul>
+                <li>株式会社SmartHR</li>
+                <li>Repro株式会社</li>
+                <li>株式会社セガ</li>
+                <li>株式会社スリーリングス</li>
+                <li>NPO法人PIECES</li>
+                <li>あまた株式会社</li>
+              </ul>
+              <span class="note">順不同・敬称略</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Contact</p>
+        <h2>お問い合わせ</h2>
+        <div class="sec-body">
+          <p>ご相談・お問い合わせは、メールでご連絡ください。</p>
+          <div class="contact-row">
+            <span class="mail" id="mail">info@skys.world</span>
+            <button class="copy" id="copy-mail" type="button">アドレスをコピー</button>
+          </div>
+          <p class="contact-note">日々の考えは <a href="https://note.com/sotoyota" target="_blank" rel="noopener">note</a> で発信しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="images/wordmark.png" alt="SKYS">
+    <span class="num">© 2015–2026 SKYS ltd.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-mail');
+  var mail = document.getElementById('mail');
+  btn.addEventListener('click', function () {
+    var text = mail.textContent.trim();
+    function done() { btn.textContent = 'コピーしました'; setTimeout(function () { btn.textContent = 'アドレスをコピー'; }, 2000); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(mail);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = '選択しました';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
